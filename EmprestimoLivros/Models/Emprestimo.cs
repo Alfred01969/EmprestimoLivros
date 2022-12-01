@@ -13,11 +13,12 @@ namespace EmprestimoLivros.Models
         [Display(Name = "Data de Devolução")]
         public DateTime? DtDevolucao { get; set; }
 
-
+        [Display(Name = "Escolha o Livro")]
         public int LivroId { get; set; }
 
         public Livro? Livro { get; set; }
 
+        [Display(Name = "Escolha o Cliente")]
         public int ClienteId { get; set; }
 
         public Cliente? Cliente { get; set; }

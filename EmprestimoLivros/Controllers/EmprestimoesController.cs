@@ -65,13 +65,17 @@ namespace EmprestimoLivros.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(emprestimo);
+                var id = emprestimo.LivroId;
+
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "Nome", emprestimo.ClienteId);
             ViewData["LivroId"] = new SelectList(_context.Livro, "LivroId", "Titulo", emprestimo.LivroId);
 
-
+            
+            
             return View(emprestimo);
             
 
