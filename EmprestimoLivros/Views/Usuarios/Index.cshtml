@@ -55,9 +55,14 @@
                 @Html.DisplayFor(modelItem => item.DataAtualização)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.UsuarioID">Edit</a> |
+                @*<a asp-action="Edit" asp-route-id="@item.UsuarioID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.UsuarioID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.UsuarioID">Delete</a>
+*@
+                <div class="btn-group" role="button">
+                            <a role="button" class="btn btn-primary" asp-controller="Usuarios" asp-route-id="@item.UsuarioID" asp-action="Edit">Editar</a>
+                        <a role="button" class="btn btn-danger" asp-controller="Usuarios" asp-route-id="@item.UsuarioID" asp-action="Delete">Apagar</a>
+</div>
             </td>
         </tr>
 }

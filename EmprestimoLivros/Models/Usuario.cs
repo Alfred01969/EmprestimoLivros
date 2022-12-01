@@ -10,6 +10,9 @@ namespace EmprestimoLivros.Models
         public string Login { get; set; }
 
         public string? Email { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
         //public PerfilEnum Perfil { get; set; }
         public DateTime DataCadastro { get; set; }
