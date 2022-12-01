@@ -66,8 +66,6 @@ namespace EmprestimoLivros.Controllers
             {
                 _context.Add(emprestimo);
                 var id = emprestimo.LivroId;
-
-
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
